@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0e5ff;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff69b4;
+    animation: fadeIn 2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.flowers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flower {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('flower.png'); /* Add your flower image here */
+    background-size: cover;
+    animation: float 5s ease-in-out infinite;
+}
+
+.flower1 { left: 10%; top: 20%; animation-delay: 0s; }
+.flower2 { left: 30%; top: 30%; animation-delay: 1s; }
+.flower3 { left: 60%; top: 10%; animation-delay: 2s; }
+.flower4 { left: 80%; top: 40%; animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.poem {
+    font-size: 1.2em;
+    color: #4b0082;
+    margin-top: 100px; /* Adjust to position the poem */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Smaller font for smaller screens */
+    }
+    .poem {
+        font-size: 1em; /* Adjust the poem font size */
+        margin-top: 50px; /* Bring the poem closer */
+    }
+}
